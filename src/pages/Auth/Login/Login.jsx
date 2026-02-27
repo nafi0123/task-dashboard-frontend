@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
-
-import useAxios from "../../../hooks/useAxios";
 import useAuth from "../../../hooks/useAuth";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 
 const Login = () => {
@@ -12,7 +11,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   
   const { login } = useAuth();
-  const axiosPublic = useAxios(); 
+  const  axiosSecure = useAxiosSecure(); 
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -21,7 +20,7 @@ const Login = () => {
 
     try {
  
-      const response = await axiosPublic.post("/api/login", {
+      const response = await  axiosSecure.post("/api/login", {
         email,
         password,
       });

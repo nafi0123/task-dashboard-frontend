@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import useAuth from "./useAuth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const axiosSecure = axios.create({
   baseURL: "https://task-api-eight-flax.vercel.app", 
