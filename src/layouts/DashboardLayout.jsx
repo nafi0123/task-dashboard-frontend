@@ -239,14 +239,14 @@ const DashboardLayout = () => {
                     Totok Michael
                   </p>
                   <p className="text-[12px] text-gray-400 font-bold opacity-80">
-                    {user.email}
+                    {user?.email || "No email available"}
                   </p>
                 </div>
               </div>
             </div>
           </header>
 
-          <main className="p-10 lg:p-14 overflow-y-auto bg-white flex-grow">
+          <main className=" overflow-y-auto  bg-base-200 flex-grow mr-3 mb-3 rounded-[2rem] min-h-screen ">
             <Outlet />
           </main>
         </div>
